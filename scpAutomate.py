@@ -2,10 +2,11 @@ from paramiko import SSHClient
 from scp import SCPClient
 
 
-serverIP = ['255.255.255.255']
+serverIP = ['192.168.1.151','192.168.1.98']
 
 serverPass = {
-    '255.255.255.255': 'zero',
+    '192.168.1.151': 'rain',
+    '192.168.1.98': 'rain',
     # '': '',
     # '': '',
     # '': '',
@@ -16,7 +17,7 @@ serverPass = {
 
 
 def connectHost(host):
-    usrname = 'zero'
+    usrname = 'rain'
     passwd = serverPass[host]
     ssh = SSHClient()
     ssh.load_system_host_keys()
